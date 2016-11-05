@@ -1,5 +1,13 @@
+import org.junit.Test;
+
 /**
- * Created by elena on 04.11.16.
+ * Test main class
  */
 public class MainTest {
+    @Test
+    public void main() throws Exception {
+        Main mainClass = new Main();
+        String[] string = {};
+        mainClass.main(string);
+    }
 }

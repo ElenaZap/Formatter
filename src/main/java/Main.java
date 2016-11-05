@@ -1,20 +1,18 @@
 import java.io.IOException;
 
 /**
- * Created by elena on 04.11.16.
+ * Main class
  */
  public class Main {
-    public static void main (final String[] args)  {
+    /**
+     *
+     * @param args string
+     * @throws IOException for read
+     */
+    public static void main (final String[] args) throws IOException {
         Formatter formatter=  new Formatter();
-        try {
-            formatter.readFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            formatter.writeFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        ReaderF reader=new ReaderF();
+        reader.readFile();
+        formatter.formatte(reader.readFile());
     }
 }
