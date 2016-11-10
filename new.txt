@@ -1,7 +1,12 @@
-import java.util.Scanner;
+import java.util.Scanner;//;;;;{{};;;jdhdgd{{{
+/*{{]]}}
+:::*/
  public class KvadratnoeUravnenie {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        }
-        
-        
+    public static void main(String[] args) /*{//;dg
+    dgdsjk;;}}
+    {;;;;[]{}*/
+    Scanner in = new Scanner(System.in);
+    }/////{jsdghsd}[][{{}////;;;;;;;;;
+    System.Out.Println("fjkhf{]}::;;;");
+    System.Out.Println('fjkhf{]}::;;;');
+    
