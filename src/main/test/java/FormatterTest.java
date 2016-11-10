@@ -39,9 +39,9 @@ public class FormatterTest {
                "    System.Out.Println(\"fjkhf{]}::;;;\");\n" +
                "    System.Out.Println('fjkhf{]}::;;;');\n" +
                "    ";
-         File file= new File( "new.txt");
-         FileReader reader= new FileReader(file);
-         char [] a=new char[ (int)file.length()];
+         File file = new File( "new.txt");
+         FileReader reader = new FileReader(file);
+         char [] a =new char[ (int)file.length()];
          reader.read(a);
         Assert.assertEquals(text, new String (a));
     }
