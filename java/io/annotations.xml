@@ -1,0 +1,5 @@
+<root>
+    <item name='java.io.Reader int read(char[])'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>

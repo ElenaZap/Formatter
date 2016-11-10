@@ -11,9 +11,15 @@ import java.io.IOException;
 public class FormatterTest {
     @Test
     public void readFile() throws IOException {
-        String text="import java.util.Scanner; public class KvadratnoeUravnenie " +
-                "{public static void main(String[] args) " +
-                "{Scanner in = new Scanner(System.in);}\n";
+        String text="import java.util.Scanner;//;;;;{{};;;jdhdgd{{{\n" +
+                "/*{{]]}}\n" +
+                ":::*/\n" +
+                " public class KvadratnoeUravnenie {public static void main(String[] args) /*{//;dg\n" +
+                "dgdsjk;;}}\n" +
+                "{;;;;[]{}*/\n" +
+                "Scanner in = new Scanner(System.in);}/////{jsdghsd}[][{{}////;;;;;;;;;\n" +
+                "System.Out.Println(\"fjkhf{]}::;;;\");\n" +
+                "System.Out.Println('fjkhf{]}::;;;');\n";
         ReaderF reader =new ReaderF();
         System.out.println(text);
        Assert.assertEquals (text,new String (reader.readFile()));
@@ -21,13 +27,18 @@ public class FormatterTest {
 
      @Test
     public void writeFile() throws IOException{
-       String text="import java.util.Scanner;\n" +
+       String text="import java.util.Scanner;//;;;;{{};;;jdhdgd{{{\n" +
+               "/*{{]]}}\n" +
+               ":::*/\n" +
                " public class KvadratnoeUravnenie {\n" +
-               "    public static void main(String[] args) {\n" +
-               "        Scanner in = new Scanner(System.in);\n" +
-               "        }\n" +
-               "        \n" +
-               "        ";
+               "    public static void main(String[] args) /*{//;dg\n" +
+               "    dgdsjk;;}}\n" +
+               "    {;;;;[]{}*/\n" +
+               "    Scanner in = new Scanner(System.in);\n" +
+               "    }/////{jsdghsd}[][{{}////;;;;;;;;;\n" +
+               "    System.Out.Println(\"fjkhf{]}::;;;\");\n" +
+               "    System.Out.Println('fjkhf{]}::;;;');\n" +
+               "    ";
          File file= new File( "new.txt");
          FileReader reader= new FileReader(file);
          char [] a=new char[ (int)file.length()];

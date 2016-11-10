@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -9,20 +10,26 @@ class ReaderF implements IReader{
     /**
      *
      * @return a char array
-     * @throws IOException for read
+     *
      */
       @Override
-    public char[] readFile() throws IOException {
-        String fil = "Text.txt";
-        File f=new File(fil);
-        FileReader reader = new FileReader(f);
+    public char[] readFile()  {
 
-       final char[] a = new char[(int) f.length()];
-        int c,i=0;
-        while ((c = reader.read()) != -1) {
-       a[i]=(char) c;
-        i++;
-        }
-    return  a;
-        }
+          try {
+              String fil = "Text.txt";
+              File f = new File(fil);
+              FileReader reader = new FileReader(f);
+
+              final char[] a = new char[(int) f.length()];
+              int c, i = 0;
+              while ((c = reader.read()) != -1) {
+                  a[i] = (char) c;
+                  i++;
+              }
+              return a;
+          }catch(IOException e){
+              System.out.print( e.getMessage());
+          }
+          return "error".toCharArray();
+      }
 }

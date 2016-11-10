@@ -6,15 +6,18 @@ import java.io.IOException;
  */
  class Writer implements IWriter {
     /**
-     *
      * @param a symbol char array
-     * @throws IOException for write
+     *
      */
-        public void writeFile(char a) throws IOException {
-            FileWriter f = new FileWriter("new.txt",true);
+    public void writeFile(char a) {
+        try {
+            FileWriter f = new FileWriter("new.txt", true);
             f.write(a);
             f.flush();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
 
 
+    }
 }
