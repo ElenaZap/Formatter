@@ -1,4 +1,0 @@
-/**
- * Formatter
- * Package information.
- */
